@@ -1,164 +1,102 @@
-var friendsArray = [
-	{
-		name: 'Scooter',
-		photo: 'http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-15.jpg',
-		scores: [
-			'1',
-			'5',
-			'5',
-			'1',
-			'5',
-			'5',
-			'1',
-			'1',
-			'1',
-			'5'
-		]
-	},
-	{
-		name: 'Fluffy',
-		photo: 'https://i.ytimg.com/vi/mRf3-JkwqfU/hqdefault.jpg',
-		scores: [
-			'2',
-			'4',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'2',
-			'1',
-			'5'
-		]
-	},
-	{
-		name: 'Spencer',
-		photo: 'http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg',
-		scores: [
-			'4',
-			'3',
-			'5',
-			'1',
-			'1',
-			'5',
-			'5',
-			'1',
-			'1',
-			'1'
-		]
-	},
-	{
-		name: 'Zackariah',
-		photo: 'https://pbs.twimg.com/profile_images/562466745340817408/_nIu8KHX.jpeg',
-		scores: [
-			'5',
-			'1',
-			'2',
-			'1',
-			'3',
-			'4',
-			'1',
-			'3',
-			'3',
-			'4'
-		]
-	},
-	{
-		name: 'Cloe',
-		photo: 'http://4.bp.blogspot.com/-HTvSYzA-pO4/UgQb4Zh_u0I/AAAAAAAAEuI/XwhtogT_1tA/s1600/3+cute2.jpg',
-		scores: [
-			'1',
-			'1',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'1'
-		]
-	},
-	{
-		name: 'Mrs. Piggy',
-		photo: 'http://img.mindbodygreen.com/image/upload/c_limit,w_738,f_auto/ftr/Miss-Piggy-large-tonya-312.jpg',
-		scores: [
-			'1',
-			'1',
-			'5',
-			'1',
-			'3',
-			'2',
-			'5',
-			'1',
-			'1',
-			'5'
-		]
-	},
-	{
-		name: 'Beyonce Knowles',
-		photo: 'http://www.billboard.com/files/styles/article_main_image/public/media/beyonce-feb-2014-billboard-650.jpg',
-		scores: [
-			'5',
-			'4',
-			'4',
-			'2',
-			'4',
-			'4',
-			'3',
-			'2',
-			'3',
-			'3'
-		]
-	},
-	{
-		name: 'Adele Adkins',
-		photo: 'https://i1.imgiz.com/data/videoshots/6829/6829475-6461.jpg',
-		scores: [
-			'5',
-			'2',
-			'3',
-			'1',
-			'5',
-			'1',
-			'3',
-			'1',
-			'1',
-			'5'
-		]
-	},
-	{
-		name: 'Kermit the Frog',
-		photo: 'http://i.dailymail.co.uk/i/pix/2015/09/02/08/2BE5406100000578-3218820-image-m-25_1441179775589.jpg',
-		scores: [
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5',
-			'5'
-		]
-	},
-	{
-		name: 'Elmo',
-		photo: 'http://1rjm5qg4v8732kpmn44ya6bj-wpengine.netdna-ssl.com/wp-content/uploads/2012/11/elmo-6601.png',
-		scores: [
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1',
-			'1'
-		]
-	}
-];
-
-module.exports = friendsArray;
+var friends = [
+    {
+      name: "Nikola Tesla",
+      photo: "https://images2.minutemediacdn.com/image/upload/c_crop,h_842,w_1500,x_0,y_264/f_auto,q_auto,w_1100/v1555006688/shape/mentalfloss/tesla_circa_1890.jpg",
+      scores: [
+        "5",
+        "1",
+        "4",
+        "4",
+        "5",
+        "1",
+        "2",
+        "5",
+        "4",
+        "1"
+      ]
+    },
+    {
+      name: "Thomas Edison",
+      photo: "https://www.onthisday.com/images/people/thomas-edison-medium.jpg",
+      scores: [
+        "4",
+        "2",
+        "5",
+        "1",
+        "3",
+        "2",
+        "2",
+        "1",
+        "3",
+        "2"
+      ]
+    },
+    {
+      name: "Robert M. Pirsig",
+      photo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Zen_motorcycle.jpg/220px-Zen_motorcycle.jpg",
+      scores: [
+        "5",
+        "2",
+        "2",
+        "2",
+        "4",
+        "1",
+        "3",
+        "2",
+        "5",
+        "5"
+      ]
+    },
+    {
+      name: "David Lean",
+      photo: "https://www.cliohistory.org/fileadmin/_processed_/9/e/csm_2-Movie_421c392105.jpg",
+      scores: [
+        "3",
+        "3",
+        "4",
+        "2",
+        "2",
+        "1",
+        "3",
+        "2",
+        "2",
+        "3"
+      ]
+    },
+    {
+      name: "Diane Lane",
+      photo: "http://www.thejewelleryeditor.com/media/images_thumbnails/filer_public_thumbnails/filer_public/7b/d7/7bd7f5d7-6c9e-4244-af40-c6b5e042c9c0/diane_lane_wearing_harry_kotlar_red_carpet_jewelry.jpg__1536x0_q75_crop-scale_subsampling-2_upscale-false.jpg",
+      scores: [
+        "4",
+        "3",
+        "4",
+        "1",
+        "5",
+        "2",
+        "5",
+        "3",
+        "1",
+        "4"
+      ]
+    },
+    {
+      name: "Jennifer Connelly",
+      photo: "https://m.media-amazon.com/images/M/MV5BOTczNTgzODYyMF5BMl5BanBnXkFtZTcwNjk4ODk4Mw@@._V1_UY317_CR12,0,214,317_AL_.jpg",
+      scores: [
+        "4",
+        "4",
+        "2",
+        "3",
+        "2",
+        "2",
+        "3",
+        "2",
+        "4",
+        "5"
+      ]
+    }
+  
+  ];
+  
+  module.exports = friends;
+  
