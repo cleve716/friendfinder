@@ -11,10 +11,8 @@ app.use(express.json());
 
 
 
-//require("./app/routing/apiRoutes.js")(app);
-//require("./app/routing/htmlRoutes.js")(app);
-require("../friendfinder/FriendFinder/app/routing/apiRoutes")(app);
-require("../friendfinder/FriendFinder/app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 
 

@@ -1,4 +1,4 @@
-var friends = [
+var listFriends = [
     {
       name: "Nikola Tesla",
       photo: "https://images2.minutemediacdn.com/image/upload/c_crop,h_842,w_1500,x_0,y_264/f_auto,q_auto,w_1100/v1555006688/shape/mentalfloss/tesla_circa_1890.jpg",
@@ -98,5 +98,5 @@ var friends = [
   
   ];
   
-  module.exports = friends;
+  module.exports = listFriends;
   

@@ -14,7 +14,11 @@
     <!--Chosen is a jQuery plugin that makes long, unwieldy select boxes much more user-friendly.  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-
+<style>
+.scale-down {
+    object-fit: scale-down;
+    }
+</style>
 </head>
 
 <body>
@@ -144,6 +148,86 @@
         <br><br><br>
 
 
-     <button type="submit" class="btn btn-success btn-lg" id="submit">
-     Submit Statements</button>
-     <br><br><br>
+        <button type="submit" class="btn btn-success btn-lg" id="submit">
+            Submit Statements</button>
+        <br><br><br>
+    </div>
+    <div id="resultsMod" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title"><strong>Best Match</strong></h2>
+            </div>
+            <div class="modal-body">
+              <h2 id="matchName"></h2>
+              <img class = scale-down id="matchImg" src="https://via.placeholder.com/300x300" alt="if no picture">
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-default" data-dismiss="modal">
+                  Close
+                </button>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    
+
+    <script type="text/javascript">
+ 
+
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+            function formValidate() {
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") isValid = false;
+
+                });
+                $(".chosen.select").each(function () {
+                    if ($(this).val() === "") isValid = false;
+
+                });
+                return isValid;
+            }
+
+            if (formValidate() === true) {
+
+
+                var newFriend = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+
+
+                $.post("/api/friends", newFriend, function (data) {
+
+                    $("#matchName").text(data.name);
+                    $("#matchImg").attr("src", data.photo);
+                    $("#resultsMod").modal("toggle");
+
+                });
+            } else {
+                alert("All fields must be filled out...");
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
