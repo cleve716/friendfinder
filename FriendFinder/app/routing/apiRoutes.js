@@ -6,6 +6,8 @@ module.exports = function (app) {
         res.json(listFriends); // grabs JSON objects from friends.js
     });
 
+ 
+
     app.post("/api/friends", function (req, res) { 
         var match = {
             name: "",
@@ -19,6 +21,7 @@ module.exports = function (app) {
              totalDiff = 0;
 
             for (var j = 0; j < listFriends[i].scores.length; j++) {
+                //Math.abs returns the absolute value
                 totalDiff += Math.abs(parseInt(listFriends[i].scores[j] - parseInt(newFriend.scores[j])));
             }
             if (totalDiff <= match.scoreDifference) {
